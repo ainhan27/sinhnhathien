@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff8fa">
+  <meta name="description" content="Một bó hoa và tấm thiệp sinh nhật 21/10 của Ái Nhân gửi đến bé Thu Hiền.">
+  <title>Một bó hoa dành tặng Thu Hiền nhân ngày sinh nhật 21/10</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+  <script src="./card.js" defer></script>
+</head>
+<body>
+  <main>
+    <a class="garden-link" href="./garden.html">Ngắm vườn hoa <span aria-hidden="true">❀</span></a>
+    <canvas id="ambientPetalsCanvas" aria-hidden="true"></canvas>
+    <header class="greeting">
+      <p class="occasion">HAPPY BIRTHDAY THU HIỀN <span>21/10</span></p>
+      <h1>Một bó hoa nhỏ,<br>gửi ngàn yêu thương.</h1>
+      <p class="greeting-caption">Mong ngày sinh nhật của bé thật dịu dàng.</p>
+    </header>
+
+    <div class="gift-layout">
+      <section class="scene-column" aria-label="Một chút yêu thương gửi đến Thu Hiền">
+
+        <div class="gift-visuals">
+          <div class="bouquet-composition">
+            <div id="bouquetStageWrapper" role="button" tabindex="0"
+              aria-label="Bó hoa hồng sinh nhật. Nhấn Enter để nhận lời chúc."
+              aria-describedby="bouquetHint">
+              <canvas id="bouquetCanvas" aria-hidden="true"></canvas>
+            </div>
+            <button class="envelope-button" id="openCard" type="button" aria-haspopup="dialog" aria-controls="greetingCard" aria-expanded="false" hidden>
+              <span class="envelope" aria-hidden="true"><span class="envelope-letter">Gửi Hiền</span><span class="envelope-seal">♡</span></span>
+              <span class="envelope-caption">Có một tấm thiệp dành cho bé nè</span>
+              <span class="envelope-action">Mở thiệp</span>
+            </button>
+          </div>
+        </div>
+
+        <footer class="scene-footer">
+          <p id="bouquetHint" class="bouquet-hint">Chạm vào một bông hoa để nhận lời yêu thương từ Ái Nhân nhé</p>
+          <p id="roseWish" class="rose-wish" role="status" aria-live="polite" aria-atomic="true"></p>
+        </footer>
+      </section>
+
+      <dialog id="greetingCard" class="card-dialog" aria-labelledby="cardTitle">
+        <div class="letter-paper">
+          <button class="close-button" id="closeCard" type="button" aria-label="Đóng thiệp">×</button>
+          <div id="cardReading">
+            <div class="letter-date" aria-label="Ngày 21 tháng 10"><span>21</span><span class="date-stem" aria-hidden="true"></span><span>10</span></div>
+            <p class="letter-recipient">Gửi <span id="cardRecipient">Thu Hiền</span>,</p>
+            <h2 id="cardTitle">Chúc bé một sinh nhật<br>thật nhiều yêu thương.</h2>
+            <div class="letter-flower" aria-hidden="true">❀</div>
+            <p id="cardMessage" class="letter-message"></p>
+            <div class="letter-signoff"><p>Với thật nhiều lời chúc và yêu thương,</p><p id="cardSender" class="letter-signature"></p></div>
+            <div class="letter-fold" aria-hidden="true"></div>
+            <div class="letter-actions"><button id="viewAlbum" class="text-button" type="button" aria-controls="memoryAlbum">Xem album kỷ niệm <span aria-hidden="true">♡</span></button></div>
+          </div>
+          <p id="cardStatus" class="card-status" role="status" aria-live="polite"></p>
+        </div>
+      </dialog>
+    </div>
+
+    <section id="memoryAlbum" class="memory-album" aria-labelledby="albumTitle" hidden>
+      <header class="album-heading">
+        <p class="album-note">Một chút kỷ niệm của chúng mình</p>
+        <h2 id="albumTitle">Những khoảnh khắc hồi xưa</h2>
+        <button id="toggleAlbum" class="text-button" type="button" aria-expanded="false" aria-controls="albumPhotos">Xòe album <span aria-hidden="true">♡</span></button>
+      </header>
+      <div id="albumPhotos" class="album-photos">
+        <figure class="portrait-card album-card">
+          <div class="portrait-photo"><img src="./assets/hin.jpg" alt="Ảnh Thu Hiền, một nụ cười rất yêu" width="768" height="1024" decoding="async"></div>
+          <figcaption><span class="portrait-dedication">Một nụ cười rất yêu.</span><span class="portrait-date">Những ngày thật vui</span></figcaption>
+        </figure>
+        <figure class="portrait-card album-card">
+          <div class="portrait-photo"><img src="./assets/ngaydo.png" alt="Ảnh kỷ niệm thứ hai của Thu Hiền" width="768" height="1024" decoding="async" loading="lazy"></div>
+          <figcaption><span class="portrait-dedication">Bình yên từ điều nhỏ.</span><span class="portrait-date">Một khoảnh khắc dịu dàng</span></figcaption>
+        </figure>
+        <figure class="portrait-card album-card">
+          <div class="portrait-photo"><img src="./assets/iu.jpg" alt="Ảnh kỷ niệm thứ ba của Thu Hiền" width="768" height="1024" decoding="async" loading="lazy"></div>
+          <figcaption><span class="portrait-dedication">Mong bé luôn rạng rỡ.</span><span class="portrait-date">Hành trình của hiện tại</span></figcaption>
+        </figure>
+      </div>
+      <p class="album-footnote">Có những điều nhỏ, nhớ lại vẫn thấy vui.</p>
+    </section>
+
+    <noscript><p class="noscript-message">Bật JavaScript để ngắm hoa nở và mở thiệp sinh nhật 21/10 nhé.</p></noscript>
+  </main>
+</body>
+</html>
